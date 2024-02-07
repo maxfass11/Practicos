@@ -1,0 +1,19 @@
+/* estilos.css */
+
+
+.contenedor-3img {
+    display: flex; 
+    
+  }
+  
+
+  .contenedor-3img .imagen {
+    flex: 1; 
+    margin-right: 2px; 
+  }
+  
+
+  .contenedor-3img img {
+    width: 100%; 
+    height: auto; 
+  }

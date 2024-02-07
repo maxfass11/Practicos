@@ -1,0 +1,10 @@
+h1{
+    font-family:Arial; color: red; font-size: 36px;
+}
+
+
+p{text-align: justify; line-height: 1.5; color: orange;}
+
+ul {
+    list-style-image: url(Imagenes/checkmark.png);
+  }

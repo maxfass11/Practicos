@@ -1,0 +1,8 @@
+.PLGrande:first-letter{
+    font-size: 300%;
+    color: red;
+    font-weight: bolder;
+    text-align: justify;
+}
+
+p{text-align: justify;}
