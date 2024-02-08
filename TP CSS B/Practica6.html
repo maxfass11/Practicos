@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla pie de pagina</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-size: large;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #d4d5d2;
+        }
+
+        .column {
+            flex: 10px;
+            padding: 15px;
+            background-color: #d4d5d2;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #d4d5d2;
+            padding: 10px;
+            color: #64bdd8;
+            font-family: Arial;
+            font-size: larger;
+            display: flex;
+            align-items: center;
+
+            
+        }
+
+        .header img {
+            width: 20px;
+            height: 20px;
+            background-color:#d4d5d2;
+            margin-right: 5px;
+        }
+
+        .list-container {
+            margin-top: 10px;
+            
+        }
+
+        .line {
+            height: 2px;
+            background-color: #64bdd8;
+        }
+
+        .list {
+            list-style: none;
+            padding: 2px;
+        }
+
+        .list li {
+            margin-bottom: 15px;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            padding: 5px;
+            height: auto;
+        }
+
+        .images img {
+            width: 150px; 
+            height: auto; 
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="header"><img src="img/carrito.png" alt="Carrito"> <b>Tienda</b></div>
+            <div class="line"></div>
+            <div class="list-container">
+                <ul class="list">
+                    <li>Celulares en promo</li>
+                    <li>Equipos</li>
+                    <li>Planes</li>
+                    <li>Servicios</li>
+                    <li>Movistar One</li>
+                    <li>Paquetes</li>
+                    <li>Credito</li>
+                    <li>Roaming</li>
+                    <li>Promociones</li>
+                    <li>Portabilidad</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="header"><img src="img/atencion.png" alt="AalC"> <b>Atención al Cliente</b></div>
+            <div class="line"></div>
+            <div class="list-container">
+                <ul class="list">
+                    <li>Foro Movistar</li>
+                    <li>Saldo y recargas</li>
+                    <li>Pagos y Facturacion</li>
+                    <li>Soporte Tecnico</li>
+                    <li>Roaming y Cobertura</li>
+                    <li>Tramites y consultas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="header"><img src="img/cuenta.png" alt="Mi Cuenta"> <b>Mi Cuenta</b></div>
+            <div class="line"></div>
+            <div class="list-container">
+                <ul class="list">
+                    <li>Acceder</li>
+                    <li>No sos usuario? Registrate</li>
+                    <li>Mi Movistar App: Accede a tu cuenta en tu celular</li>
+                    <li>Habla con Aura</li>
+                </ul>
+            </div>
+            <div class="images">
+                <img src="img/Google Play.png" alt="GP">
+            </div>
+            <div class="images">
+                <img src="img/apple.png" alt="Apple">
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
