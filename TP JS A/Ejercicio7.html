@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio7 - Frases al Azar</title>
+
+</head>
+<body>
+    <h1 id="frase">Frase celebre al azar: </h1>
+    <script src="frases.js"></script>
+    <script>
+        window.onload=function(){
+            var frase = document.getElementById("frase");
+            var indiceRandom = Math.floor(Math.random()*frases.length);
+            frase.textContent += frases[indiceRandom];
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8 - Calculo Estadístico</title>
+</head>
+<body>
+    <h1>Calculo Estadístico</h1>
+    
+    <label for="num">Ingrese un número:</label>
+    <input type="number" id="num">
+    <button onclick="agregarNumero()">Agregar</button>
+    <button onclick="calcularResumen()">Calcular Resumen</button>
+
+    <h2>Lista de Números:</h2>
+    <ul id="numerosLista"></ul>
+
+    <h2>Resumen Estadístico:</h2>
+    <p id="resumen"></p>
+
+    <script>
+        var numeros = [];
+
+        function agregarNumero() {
+            var num = document.getElementById("num");
+            var numero = parseFloat(num.value);
+
+            if (!isNaN(numero)) {
+                numeros.push(numero);
+                actualizarListaNumeros();
+                num.value = "";
+            } else {
+                alert("Por favor, ingrese un número válido.");
+            }
+        }
+
+        function actualizarListaNumeros() {
+            var numerosLista = document.getElementById("numerosLista");
+            numerosLista.innerHTML = "<li>" + numeros.join("</li><li>") + "</li>";
+        }
+
+        function calcularResumen() {
+                var promedio = calcularPromedio();
+                var mediana = calcularMediana();
+                var minimo = Math.min(...numeros);
+                var maximo = Math.max(...numeros);
+                var desviacionEstandar = calcularDesviacionEstandar();
+
+                var resumen = "Promedio: " + promedio.toFixed(2) +
+                              "\nMediana: " + mediana.toFixed(2) +
+                              "\nMínimo: " + minimo +
+                              "\nMáximo: " + maximo +
+                              "\nDesviación Estándar: " + desviacionEstandar.toFixed(2);
+
+                document.getElementById("resumen").textContent = resumen;
+        }
+
+        function calcularPromedio() {
+            var suma = numeros.reduce(function(a, b) { return a + b; }, 0);
+            return suma / numeros.length;
+        }
+
+        function calcularMediana() {
+            var sortedNumeros = numeros.slice().sort(function(a, b) { return a - b; });
+            var middle = Math.floor(sortedNumeros.length / 2);
+
+            if (sortedNumeros.length % 2 === 0) {
+                return (sortedNumeros[middle - 1] + sortedNumeros[middle]) / 2;
+            } else {
+                return sortedNumeros[middle];
+            }
+        }
+
+        function calcularDesviacionEstandar() {
+            var promedio = calcularPromedio();
+            var sumaCuadrados = numeros.reduce(function(sum, num) {
+                return sum + Math.pow(num - promedio, 2);
+            }, 0);
+
+            var varianza = sumaCuadrados / numeros.length;
+            return Math.sqrt(varianza);
+        }
+    </script>
+</body>
+</html>
