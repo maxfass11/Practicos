@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio6 - Split</title>
+</head>
+
+<body>
+    <script>
+        var frase = prompt("Ingrese una frase:");
+        var palabras = frase.split(" ");
+
+        alert("Número de palabras: " + palabras.length +
+                "\nPrimera palabra: " + palabras[0] +
+                "\nÚltima palabra: " + palabras[palabras.length - 1] +
+                "\nPalabras en orden inverso: " + palabras.reverse().join(" ") +
+                "\nPalabras ordenadas de 'a' a 'z': " + palabras.sort().join(" ") +
+                "\nPalabras ordenadas de 'z' a 'a': " + palabras.sort().reverse().join(" "));
+    </script>
+</body>
+</html>

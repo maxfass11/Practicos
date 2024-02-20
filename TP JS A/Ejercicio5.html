@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5 - Adivinar numero</title>
+
+    <script>
+        function adivinaNum() {
+        var num = parseInt(Math.random()*1000000);
+        console.log(num);
+        var i=0;
+        do
+        {
+            i++;
+            var numUs = prompt("Adivine el numero entero entre 1 y 1000000 en que estoy pensando:");
+            if(numUs<num)
+                {
+                alert("El numero es mayor");
+                }else if(numUs>num){
+                alert("El numero es menor");    
+                }   
+        }
+        while(numUs!=num)
+        alert("Felicitaciones has adivinado el numero en solo " + i + " intentos");
+        }
+        
+    </script>
+</head>
+
+<body>
+    <H1>Adivinar numero aleatorio entre 0 y 1000000</H1>
+    <button onclick="adivinaNum()">Generar</button>
+
+</body>
+</html>

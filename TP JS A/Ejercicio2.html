@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2 - Rectangulo</title>
+
+    <script>
+        function dibujarRectangulo() {
+          var base = prompt("Ingresa un número entero (base del rectángulo):");
+          var altura = prompt("Ingresa un número entero (altura del rectángulo):");
+    
+          base = parseInt(base);
+          altura = parseInt(altura);
+    
+          if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
+            alert("Por favor, ingresa números enteros válidos y mayores a cero.");
+            return;
+          }
+
+          var rectangulo = "";
+          for (var i = 0; i < altura; i++) {
+            for (var j = 0; j < base; j++) {
+              rectangulo += "* ";
+            }
+            rectangulo += "\n"; 
+          }
+    
+          alert("Rectángulo de asteriscos:\n\n" + rectangulo);
+        }
+      </script>
+</head>
+
+<body>
+    <h1>Dibujo de Rectángulo</h1>
+    <button onclick="dibujarRectangulo()">Dibujar Rectángulo</button>
+</body>
+</html>

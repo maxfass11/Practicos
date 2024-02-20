@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Ejercicio1 - Calculadora dias</title>
+
+    <script>
+        function calculoDiasVida() {
+            var nombre = prompt("Ingrese su nombre:");
+            var edad = prompt("Ingrese su edad:");
+
+            edad = parseInt(edad);
+    
+            var diasVividos = edad * 365; 
+    
+            var resultado = "Hola, " + nombre + " has vivido aproximadamente " + diasVividos + " días hasta ahora.";
+            alert(resultado);
+            }
+        </script>
+</head>
+
+<body>
+    <H1>Calculadora dias vividos</H1>
+    <button onclick="calculoDiasVida()">Calcular</button>
+
+</body>
+</html>
