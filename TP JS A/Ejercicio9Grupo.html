@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio9 - Datos Personales</title>
+    <script src="Ejercicio9Grupo.js"></script>
+</head>
+<body>
+    <h1>Datos Personales</h1>
+    
+    <label for="nombre">Ingrese nombre:</label>
+    <input type="text" id="nombre">
+    <label for="apellido">Ingrese apellido:</label>
+    <input type="text" id="apellido">
+    <label for="dni">Ingrese dni:</label>
+    <input type="number" id="dni">
+    <button onclick="agregarDatos()">Agregar</button>
+
+    <h2>Datos ingresados</h2>
+    <table border>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaDatos"></tbody>
+
+    </table>
+</body>
+</html>

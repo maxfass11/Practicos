@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10 - Dias transcurridos</title>
+</head>
+
+<body>
+    <h2>Calculadora Dias</h2>
+
+    <label for="fecha">Ingrese una fecha (DD-MM-YYYY):</label>
+    <input type="text" id="fecha" placeholder="DD-MM-YYYY">
+    <button onclick="calcularDiasTranscurridos()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDiasTranscurridos() {
+            var fecha = document.getElementById("fecha").value;
+            var fechaV = parseFecha(fecha);
+            var fechaActual= new Date();
+
+            if(fechaV>fechaActual) {
+                var diferencia = fechaV-fechaActual;
+                var diasFaltantes=Math.ceil(diferencia/(1000*3600*24));
+                document.getElementById("resultado").innerHTML="Faltan " + diasFaltantes + " dias hasta la fecha ingresada.";
+            } else {
+                var diferencia = fechaActual - fechaV;
+                var diasPasados= Math.ceil(diferencia/(1000*3600*24));
+                document.getElementById("resultado").innerText = "Han pasado " + diasPasados + " días desde la fecha ingresada.";
+            }
+        }
+
+    function parseFecha(fechaString) {
+        var partes = fechaString.split("-");
+        return new Date(partes[2], partes[1] - 1, partes[0]);
+
+    }    
+    </script>
+    
+</body>
+</html>
